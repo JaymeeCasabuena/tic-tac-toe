@@ -1,9 +1,18 @@
 import { StyleSheet, Text, View } from "react-native";
+import { useNavigation } from '@react-navigation/native'
 import Board from '../components/Board'
 import TButton from '../components/TButton'
 import Title from "../components/Title";
+import { COLORS } from "../constants/Color";
 
-export default function App() {
+export default function Home () {
+  const navigation = useNavigation();
+  const goToRules = () => {
+    navigation.navigate('Rules');
+  }
+  const goToCredits = () => {
+    navigation.navigate('Credits');
+  }
   return (
     <View style={styles.container}>
       <View style={styles.title}>
@@ -13,8 +22,8 @@ export default function App() {
          <Board/>
       </View>
       <View style={styles.buttons}>
-        <TButton title="Rules"/>
-        <TButton title="Credits"/>
+        <TButton title="Rules" onPress={goToRules}/>
+        <TButton title="Credits" onPress={goToCredits}/>
       </View>
     </View>
   )
@@ -24,6 +33,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: "center",
+        backgroundColor: COLORS.Cream,
       },
       board: {
         flexDirection: 'row',
