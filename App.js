@@ -30,10 +30,10 @@ export default function App() {
   return (
     <View style={styles.container} onLayout={handleOnLayout}>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Rules" component={Rules}/>
-          <Stack.Screen name="Credits" component={Credit}/>
+        <Stack.Navigator screenOptions={{headerStyle: {backgroundColor: COLORS.Cream}}}>
+          <Stack.Screen name="Home" component={Home} options={{headerTitleAlign: 'center', headerTintColor: COLORS.Red}} />
+          <Stack.Screen name="Rules" component={Rules} options={{headerTitleAlign: 'center', headerTintColor: COLORS.Red}}/>
+          <Stack.Screen name="Credits" component={Credit} options={{headerTitleAlign: 'center', headerTintColor: COLORS.Red}} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
