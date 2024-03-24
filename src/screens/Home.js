@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 import { useNavigation } from '@react-navigation/native'
 import Board from '../components/Board'
 import TButton from '../components/TButton'
@@ -15,8 +15,9 @@ export default function Home () {
   }
   return (
     <View style={styles.container}>
-      <View style={styles.title}>
-         <Title title="Tic Tac Toe"/>
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={require('../../assets/Logo.png')} />
+         {/* <Title title="Tic Tac Toe"/> */}
       </View>
       <View style={styles.board}>
          <Board/>
@@ -43,12 +44,13 @@ const styles = StyleSheet.create({
         bottom: 50,
         top: 50,
       },
-      title: {
-        flexDirection: 'row',
-        alignItems: "center",
+      imageContainer: {
         position: 'absolute',
-        top: 60,
-        paddingTop: 50,
+        top: -70,
+      },
+      image: {
+        width: 380,
+        height: 380,
       },
       buttons: {
         flexDirection: 'row',
