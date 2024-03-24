@@ -13,7 +13,7 @@ const button = ({onPress, title}) => {
 const styles = StyleSheet.create({
     button: {
       width: '45%',  
-      backgroundColor: "#BE5D27",
+      backgroundColor: "#6fcb9f",
       borderRadius: 10,
       borderColor: 'black',
       borderWidth: 2,
