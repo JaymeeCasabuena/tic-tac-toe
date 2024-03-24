@@ -50,13 +50,12 @@ const styles = StyleSheet.create({
         top: 60,
         paddingTop: 50,
       },
-    buttons: {
+      buttons: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-end',
         position: 'absolute',
         bottom: 0,
         paddingBottom: 40,
-
     }
 });

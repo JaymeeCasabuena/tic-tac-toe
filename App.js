@@ -14,7 +14,8 @@ const Stack = createStackNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts ({
-    "Pixel": require('./assets/fonts/PixelifySansRegular.ttf')
+    "Pixel": require('./assets/fonts/PixelifySansRegular.ttf'),
+    "Quantico": require('./assets/fonts/Quantico-Regular.ttf')
   })
 
   const handleOnLayout = useCallback(async () => {
