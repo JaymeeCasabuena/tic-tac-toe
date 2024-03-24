@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { COLORS } from "../constants/Color";
 
 
 const tiles = ["0", "0", "X", "X", "0", "", "X", "", "0"];
@@ -18,7 +19,7 @@ export default function Board () {
 
 const styles = StyleSheet.create({
     outerDiv: {
-      backgroundColor: "#DACC00",
+      backgroundColor: COLORS.Yellow,
       flexDirection: "row",
       flexWrap: "wrap",
       justifyContent: "space-between",
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     squares: {
       width: "33.33%",
       height: "33.33%",
-      backgroundColor: "#7AB844",
+      backgroundColor: COLORS.Green,
       borderColor: "#000000",
       borderWidth: 2,
     },

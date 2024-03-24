@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { COLORS } from "../constants/Color";
 
 
 const Title = ({title}) => {
@@ -12,7 +13,7 @@ const Title = ({title}) => {
 
 const styles = StyleSheet.create({
     titleBox: {
-      backgroundColor: "#BE5D27",
+      backgroundColor: COLORS.Red,
       borderRadius: 10,
       borderColor: 'black',
       borderWidth: 2,

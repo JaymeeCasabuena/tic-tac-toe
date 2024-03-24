@@ -1,4 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { COLORS } from "../constants/Color";
 
 
 const button = ({onPress, title}) => {
@@ -13,7 +14,7 @@ const button = ({onPress, title}) => {
 const styles = StyleSheet.create({
     button: {
       width: '45%',  
-      backgroundColor: "#6fcb9f",
+      backgroundColor: COLORS.Teal,
       borderRadius: 10,
       borderColor: 'black',
       borderWidth: 2,
