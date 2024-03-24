@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
       width: '45%',  
       backgroundColor: COLORS.Teal,
       borderRadius: 10,
-      borderColor: 'black',
+      borderColor: COLORS.Brown,
       borderWidth: 2,
       padding: 10,
       alignItems: "center",

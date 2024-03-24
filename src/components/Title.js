@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     titleBox: {
       backgroundColor: COLORS.Red,
       borderRadius: 10,
-      borderColor: 'black',
+      borderColor: COLORS.Brown,
       borderWidth: 2,
       padding: 10,
     },

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { useCallback } from "react";
 import Home from './src/screens/Home';
+import { COLORS } from "./src/constants/Color";
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 
@@ -31,7 +32,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",
+    backgroundColor: COLORS.Cream,
     alignItems: "center",
     justifyContent: "center",
   }

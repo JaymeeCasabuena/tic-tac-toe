@@ -4,5 +4,5 @@ export const COLORS = {
     Yellow: '#dacc00',
     Green: '#7ab844',
     Brown: '#666547',
-    Beige: '#ffe28a',
+    Cream: '#fffeb3',
   };

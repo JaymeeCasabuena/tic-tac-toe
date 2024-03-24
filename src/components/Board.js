@@ -31,12 +31,12 @@ const styles = StyleSheet.create({
       width: "33.33%",
       height: "33.33%",
       backgroundColor: COLORS.Green,
-      borderColor: "#000000",
+      borderColor: COLORS.Brown,
       borderWidth: 2,
     },
     outerBorders: {
       borderWidth: 1,
-      borderColor: "#000000",
+      borderColor: COLORS.Brown,
       borderRadius: 10,
     },
     text: {
