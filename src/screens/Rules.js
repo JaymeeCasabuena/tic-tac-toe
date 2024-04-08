@@ -2,64 +2,51 @@ import { StyleSheet, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { COLORS } from "../constants/Color";
 import { SampleText } from "../constants/Text";
-import TButton from '../components/TButton'
+import TButton from "../components/TButton";
 import Title from "../components/Title";
 import Message from "../components/Message";
 
 const Rules = () => {
+  const navigation = useNavigation();
+  const goToHome = () => {
+    navigation.navigate("Tic Tac Toe");
+  };
 
-    const navigation = useNavigation();
-    const goToHome = () => {
-      navigation.navigate('Home');
-    }
-
-    return (
-        <View style={styles.container}>
-            <View style={styles.title}>
-                <Title title="Rules"/>
-            </View>
-            <View style={styles.message}>
-                <Message text={SampleText.Rules}/>
-            </View>
-            <View style={styles.buttons}>
-                <TButton title="Back" onPress={goToHome}/>
-            </View>
-        </View>
-    )
-}
-
+  return (
+    <View style={styles.container}>
+      <View style={styles.title}>
+        <Title title="Rules" />
+      </View>
+      <View style={styles.message}>
+        <Message text={SampleText.Rules} />
+      </View>
+      <View style={styles.buttons}>
+        <TButton title="Back" onPress={goToHome} />
+      </View>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        backgroundColor: COLORS.Cream,
-    },
-    title: {
-        flexDirection: 'row',
-        alignItems: "center",
-        position: 'absolute',
-        top: 10,
-        paddingTop: 20,
-      },
-    message: {
-        flexDirection: 'row',
-        width: '80%',
-        height: '90%',
-        alignItems: "center",
-        justifyContent: "center",
-        position: 'absolute',
-        bottom: 50,
-        top: 50,
-      },
-      buttons: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
-        position: 'absolute',
-        bottom: 0,
-        paddingBottom: 20,
-    }
-  });
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.Cream,
+    paddingTop: 90,
+    paddingBottom: 40,
+  },
+  title: {
+    marginTop: 40,
+  },
+  message: {
+    width: "80%",
+    marginTop: 70,
+  },
+  buttons: {
+    marginBottom: 100,
+  },
+});
 
-  export default Rules;
+export default Rules;

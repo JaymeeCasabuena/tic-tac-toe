@@ -5,4 +5,5 @@ export const COLORS = {
     Green: '#7e9953',
     Brown: '#666547',
     Cream: '#f2dbaf',
+    Blue: '#0e9aa7'
   };
