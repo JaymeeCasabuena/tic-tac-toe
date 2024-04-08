@@ -1,6 +1,6 @@
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 import { COLORS } from "../constants/Color";
-import gameLogic from "../datamodel/game";
+import gameLogic from "../datamodel/Game";
 
 export default function Board() {
   const {
@@ -11,6 +11,7 @@ export default function Board() {
     previousMove,
     nextMove,
     currentMove,
+    currentPlayer,
   } = gameLogic();
   return (
     <View>
@@ -52,11 +53,17 @@ export default function Board() {
       <View style={[styles.outerDiv, styles.outerBorders]}>
         {currentBoardState.map((t, i) => (
           <View style={styles.squares} key={i}>
-            <TouchableOpacity onPress={() => handleChange(i)}>
+            <TouchableOpacity
+              onPress={() => handleChange(i)}
+              disabled={t !== ""}
+            >
               <Text style={styles.text}>{t}</Text>
             </TouchableOpacity>
           </View>
         ))}
+      </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.player}>Current Player: {currentPlayer}</Text>
       </View>
     </View>
   );
@@ -88,7 +95,7 @@ const styles = StyleSheet.create({
     width: "100%",
     textAlign: "center",
     fontSize: 60,
-    color: "black",
+    color: COLORS.Cream,
     fontFamily: "Oregano",
   },
   buttonContainer: {
@@ -121,5 +128,16 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     textAlignVertical: "center",
     fontSize: 24,
+    color: COLORS.Cream
+  },
+  player: {
+    fontFamily: "Oregano",
+    fontSize: 22,
+    color: COLORS.Red
+  },
+  textContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 20,
   },
 });
